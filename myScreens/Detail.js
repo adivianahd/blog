@@ -1,12 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-function Detail() {
+function Detail({ navigation }) {
+  const name = navigation.getParam('name')
+  const body = navigation.getParam('body')
+  const title = navigation.getParam('title')
+
     return (
       <View style={styles.container}>
-        <Text>Soy la pantalla DETALLES DEL POST</Text>
+        <Text>{name}</Text>
+        <Text>{title}</Text>
+        <Text>{body}</Text>
       </View>
-    );
+    )
   }
 
 export default Detail;
